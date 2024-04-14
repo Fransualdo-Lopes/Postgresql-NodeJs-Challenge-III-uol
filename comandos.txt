@@ -1,0 +1,43 @@
+Comandos Linux:
+
+sudo -u postgres psql //inicia o prompt do PostgreSQL
+\l     //lista todos os bancos de dados PostgreSQL 
+create database postgresql_nodejs_desafio_db; //criando tabela
+\c postgresql_nodejs_desafio_db; //acesso ao banco
+
+create table tasks {
+    id serial primary key,
+    title  text  not null,
+    description text,
+    status integer,
+    created_at timestamp,
+    update_at timestamp,
+}
+
+// inserir uma tarefa dentro do banco de dados:
+insert into tasks (
+    title, description, status, created_at, update_at
+) values (
+    'title one',
+    'description'
+    1,
+    current_timestamp,
+    current_timestamp
+);
+
+select * from tasks // verifica as informaçoes no banco.
+---------------
+//criando a aplicação javascript
+
+yarn init -y
+
+yarn add nodemon -D
+
+yarn add express
+
+-----------
+
+
+
+
+
